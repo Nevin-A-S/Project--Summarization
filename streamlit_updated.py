@@ -14,7 +14,7 @@ class WebSummarizerChatbot:
         st.set_page_config(page_title="Web Summarizer Chatbot")
         st.markdown("<h1 style='text-align: center;'>Web Summarizer Chatbot</h1>", unsafe_allow_html=True)
         self.options = ['Website', 'Google Search', 'PDF', 'Youtube']
-        self.models = ['mixtral-8x7b-32768', 'llama3-70b-8192', 'gemini-pro']
+        self.models = ['mistral-saba-24b', 'llama3-70b-8192', 'gemini-pro']
 
         if "text" not in st.session_state:
             st.session_state.text = None

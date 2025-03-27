@@ -44,7 +44,7 @@ class RAGSystem:
         )
 
 class chatbot:
-    def __init__(self, data, model="gemini-pro"):
+    def __init__(self, data, model="gemini-2.0-flash"):
         self.rag_system = RAGSystem(data)
         self.model = ChatGoogleGenerativeAI(model=model, google_api_key=config.GEMINI_API,
                                             temperature=0.2, convert_system_message_to_human=True)
@@ -65,7 +65,7 @@ class chatbotLLama:
         return response
 
 class chatbotMix:
-    def __init__(self, data, model='mixtral-8x7b-32768'):
+    def __init__(self, data, model='mistral-saba-24b'):
         self.rag_system = RAGSystem(data)
         self.model = ChatGroq(groq_api_key=config.GROQ_API, model_name=model)
         self.qa_chain = self.rag_system.get_qa_chain(self.model)

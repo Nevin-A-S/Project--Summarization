@@ -15,7 +15,7 @@ def summarizer(text, model):
     
     try:
         if model == 'gemini-pro':
-            model = genai.GenerativeModel("gemini-pro")
+            model = genai.GenerativeModel("gemini-2.0-flash")
             response = model.generate_content(prompt + "".join(text))
             return response.text
 
@@ -25,6 +25,6 @@ def summarizer(text, model):
         return response['response']
     except Exception as e:
         print(f"Error encountered: {e}. Switching to Gemini model.")
-        model = genai.GenerativeModel("gemini-pro")
+        model = genai.GenerativeModel("gemini-2.0-flash")
         response = model.generate_content(prompt + "".join(text))
         return response.text
