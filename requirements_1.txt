@@ -16,3 +16,11 @@ pypdf
 PyPDF2
 faiss-cpu
 accelerate
+requests
+beautifulsoup4
+fake-useragent
+html2text
+readability-lxml
+trafilatura
+extruct
+w3lib
